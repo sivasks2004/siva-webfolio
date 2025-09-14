@@ -2,8 +2,8 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {
-  const { ref: leftRef, isVisible: leftVisible } = useScrollAnimation();
-  const { ref: rightRef, isVisible: rightVisible } = useScrollAnimation();
+  const { ref: leftRef, isVisible: leftVisible } = useScrollAnimation({ triggerOnMount: true, delayMs: 0 });
+  const { ref: rightRef, isVisible: rightVisible } = useScrollAnimation({ triggerOnMount: true, delayMs: 150 });
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
