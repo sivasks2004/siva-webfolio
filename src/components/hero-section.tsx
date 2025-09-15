@@ -22,8 +22,8 @@ export default function HeroSection() {
             className={`slide-in-left ${leftVisible ? 'visible' : ''}`}
           >
             <img
-              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=1000"
-              alt="Adeline Palmerston Professional Portrait"
+              src="attached_assets\Professional_photo_3.jpeg"
+              alt="Siva kulanthaisamy professional Portrait"
               className="rounded-lg shadow-2xl w-full h-auto object-cover"
               data-testid="hero-portrait"
             />
@@ -36,14 +36,14 @@ export default function HeroSection() {
           >
             <div>
               <h1 className="text-5xl md:text-7xl font-black text-primary mb-4" data-testid="hero-title">
-                Hi, I'm <span className="text-accent">Adeline</span>
+                Hi, I'm <span className="text-accent">Siva</span>
               </h1>
               <h2 className="text-2xl md:text-3xl font-light text-muted-foreground mb-6" data-testid="hero-subtitle">
-                A Passionate <span className="text-primary font-semibold">Full-Stack Developer</span>
+                A Passionate <span className="text-primary font-semibold">Data Analyst</span>
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-lg" data-testid="hero-description">
-                I craft beautiful and functional web experiences with modern technologies.
-                Passionate about creating digital solutions that make a difference.
+                I bring a strategic mindset, attention to detail, and a collaborative spirit to everything I do. 
+                Whether it’s designing scalable solutions or contributing to data-backed strategies, I aim to deliver meaningful value through both analysis and action.
               </p>
             </div>
 

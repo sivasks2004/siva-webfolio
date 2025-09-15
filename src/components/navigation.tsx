@@ -18,7 +18,7 @@ export default function Navigation() {
         <div className="flex items-center justify-between">
           {/* Logo/Name */}
           <div className="text-2xl font-bold text-primary">
-            <span>Adeline Palmerston</span>
+            <span>Siva Kulanthaisamy</span>
           </div>
 
           {/* Desktop Navigation */}

@@ -8,87 +8,155 @@ export default function AboutSection() {
   return (
     <section id="about" className="py-20 bg-muted">
       <div className="container mx-auto px-6">
+        {/* Section Title */}
         <div
           ref={titleRef}
-          className={`fade-in mb-16 ${titleVisible ? 'visible' : ''}`}
+          className={`fade-in mb-16 ${titleVisible ? "visible" : ""}`}
         >
-          <h2 className="text-4xl md:text-5xl font-black text-center text-primary mb-4" data-testid="about-title">
+          <h2
+            className="text-3xl md:text-5xl font-black text-center text-primary mb-4"
+            data-testid="about-title"
+          >
             About Me
           </h2>
-          <div className="w-24 h-1 bg-primary mx-auto"></div>
+          <div className="w-20 md:w-24 h-1 bg-primary mx-auto"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           {/* Left: Bio Text */}
           <div
             ref={leftRef}
-            className={`slide-in-left space-y-6 ${leftVisible ? 'visible' : ''}`}
+            className={`slide-in-left space-y-8 ${leftVisible ? "visible" : ""}`}
           >
-            <div className="space-y-4">
-              <div className="flex items-center space-x-4 mb-6">
-                <span className="text-6xl font-black text-border">01.</span>
-                <h3 className="text-2xl font-bold text-primary">My Journey</h3>
+            {/* Who I Am */}
+            <div className="space-y-3 max-w-3xl">
+              <div className="flex items-center space-x-3 mb-4">
+                <span className="text-4xl md:text-6xl font-black text-border">
+                  01.
+                </span>
+                <h3 className="text-xl md:text-2xl font-bold text-primary">
+                  Who I Am
+                </h3>
               </div>
-              <p className="text-muted-foreground leading-relaxed" data-testid="about-journey">
-                With over 5 years of experience in web development, I specialize in creating
-                modern, responsive applications using React, Node.js, and cutting-edge technologies.
-                My passion lies in transforming complex problems into elegant, user-friendly solutions.
+              <p className="text-sm md:text-base text-muted-foreground leading-relaxed text-justify">
+                Curiosity about what data can achieve continues to fuel my
+                journey of exploration and growth. I am Siva, a passionate data
+                enthusiast with a strong interest in transforming complex
+                information into meaningful insights that support strategic
+                decision-making. My focus lies in solving real-world challenges,
+                designing impactful dashboards, and aligning analytics with
+                business objectives to drive measurable outcomes.
               </p>
             </div>
 
-            <div className="space-y-4">
-              <div className="flex items-center space-x-4 mb-6">
-                <span className="text-6xl font-black text-border">02.</span>
-                <h3 className="text-2xl font-bold text-primary">My Passion</h3>
+            {/* My Work */}
+            <div className="space-y-3 max-w-3xl">
+              <div className="flex items-center space-x-3 mb-4">
+                <span className="text-4xl md:text-6xl font-black text-border">
+                  02.
+                </span>
+                <h3 className="text-xl md:text-2xl font-bold text-primary">
+                  My Work
+                </h3>
               </div>
-              <p className="text-muted-foreground leading-relaxed" data-testid="about-passion">
-                I believe in the power of clean code and thoughtful design. Every project is an
-                opportunity to learn something new and push the boundaries of what's possible on the web.
+              <p className="text-sm md:text-base text-muted-foreground leading-relaxed text-justify">
+                I am currently pursuing my Master of Computer Applications at
+                Kongu Engineering College, where I have gained valuable
+                experience through hands-on projects that integrate both
+                technical expertise and business relevance. These include
+                developing a Smart City Waste Management System, creating an
+                IoT-enabled Smart Irrigation and Automatic Water Sprinkler,
+                building a Student Event Management Platform, designing a
+                Festive Crackers Booking System, and conducting a research study
+                on the impact of 5G electromagnetic radiation on animal behavior
+                and health.
               </p>
             </div>
 
-            {/* Statistics */}
-            <div className="grid grid-cols-3 gap-4 pt-8">
-              <div className="text-center">
-                <div className="text-3xl font-black text-primary" data-testid="stat-projects">50+</div>
-                <div className="text-sm text-muted-foreground">Projects</div>
+            {/* My Vision */}
+            <div className="space-y-3 max-w-3xl">
+              <div className="flex items-center space-x-3 mb-4">
+                <span className="text-4xl md:text-6xl font-black text-border">
+                  03.
+                </span>
+                <h3 className="text-xl md:text-2xl font-bold text-primary">
+                  My Vision
+                </h3>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-black text-primary" data-testid="stat-experience">5+</div>
-                <div className="text-sm text-muted-foreground">Years</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-black text-primary" data-testid="stat-clients">30+</div>
-                <div className="text-sm text-muted-foreground">Clients</div>
-              </div>
+              <p className="text-sm md:text-base text-muted-foreground leading-relaxed text-justify">
+                I bring a strategic mindset and a collaborative spirit to every
+                project. My goal is to keep learning, innovating, and creating
+                solutions that make a meaningful difference in data and
+                technology. I’m excited to connect and grow with like-minded
+                people.
+              </p>
             </div>
           </div>
 
-          {/* Right: Supporting Images */}
+          {/* Right: GIF + Academic Progress */}
           <div
             ref={rightRef}
-            className={`slide-in-right ${rightVisible ? 'visible' : ''}`}
+            className={`slide-in-right space-y-12 ${
+              rightVisible ? "visible" : ""
+            }`}
           >
-            <div className="grid grid-cols-2 gap-4">
+            {/* GIF */}
+            <div className="flex justify-center">
               <img
-                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400"
-                alt="Developer workspace"
-                className="rounded-lg shadow-lg col-span-2 h-48 object-cover"
-                data-testid="about-image-workspace"
-              />
-              <img
-                src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300"
-                alt="Coding on laptop"
-                className="rounded-lg shadow-lg h-32 object-cover"
-                data-testid="about-image-coding"
-              />
-              <img
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300"
-                alt="Team collaboration"
-                className="rounded-lg shadow-lg h-32 object-cover"
-                data-testid="about-image-team"
+                src="attached_assets/Data_Analyst_GIF.gif"
+                alt="Coding animation"
+                className="rounded-lg shadow-lg w-full max-w-sm md:max-w-lg object-cover"
+                data-testid="about-image-gif"
               />
             </div>
+
+            {/* Academic Progress Timeline */}
+            <section id="education" className="py-6">
+              <div className="relative border-l border-primary/40 pl-6">
+                {/* MCA */}
+                <div className="mb-8 relative">
+                  <div className="absolute w-3 h-3 bg-primary rounded-full -left-[22px] top-1"></div>
+                  <h3 className="text-lg md:text-xl font-semibold text-white">
+                    MCA – Kongu Engineering College
+                  </h3>
+                  <span className="block text-xs md:text-sm text-accent font-medium mb-1">
+                    2024 - Present
+                  </span>
+                  <p className="text-xs md:text-sm text-muted-foreground">
+                    Currently pursuing a Master’s in building intelligent apps
+                    with seamless UI/UX
+                  </p>
+                </div>
+
+                {/* BCA */}
+                <div className="mb-8 relative">
+                  <div className="absolute w-3 h-3 bg-primary rounded-full -left-[22px] top-1"></div>
+                  <h3 className="text-lg md:text-xl font-semibold text-white">
+                    B.Sc – Kongu Engineering College
+                  </h3>
+                  <span className="block text-xs md:text-sm text-accent font-medium mb-1">
+                    2021 - 2024
+                  </span>
+                  <p className="text-xs md:text-sm text-muted-foreground">
+                   Competent in the design and computer systems streams
+                  </p>
+                </div>
+
+                {/* HSC */}
+                <div className="mb-8 relative">
+                  <div className="absolute w-3 h-3 bg-primary rounded-full -left-[22px] top-1"></div>
+                  <h3 className="text-lg md:text-xl font-semibold text-white">
+                    HSC – Kongu vellalar Matric Hr. Sec. School
+                  </h3>
+                  <span className="block text-xs md:text-sm text-accent font-medium mb-1">
+                    2019 - 2021
+                  </span>
+                  <p className="text-xs md:text-sm text-muted-foreground">
+                    Earned 81.56% in Computer Science & Mathematics stream
+                  </p>
+                </div>
+              </div>
+            </section>
           </div>
         </div>
       </div>

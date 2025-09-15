@@ -5,7 +5,9 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import { Mail, Phone, MapPin } from "lucide-react";
+import emailjs from "emailjs-com";
 
 interface FormData {
   name: string;
@@ -35,30 +37,39 @@ export default function ContactSection() {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
 
-    try {
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      toast({
-        title: "Message sent successfully!",
-        description: "Thank you for your message. I'll get back to you soon.",
-      });
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setIsSubmitting(true);
 
-      setFormData({ name: "", email: "", message: "" });
-    } catch (error) {
-      toast({
-        title: "Error sending message",
-        description: "Please try again later.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+  try {
+    await emailjs.send(
+      "service_2ufuzm2",
+      "template_zef9108",
+      {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+      },
+      "MbKBnLxIU7K6Xy1YX"
+    );
+
+    toast({
+      title: "Message sent successfully!",
+      description: "Thank you for your message. I'll get back to you soon.",
+    });
+
+    setFormData({ name: "", email: "", message: "" });
+  } catch (error) {
+    toast({
+      title: "Error sending message",
+      description: "Please try again later.",
+      variant: "destructive",
+    });
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
   return (
     <section id="contact" className="py-20">
@@ -87,53 +98,40 @@ export default function ContactSection() {
               <div className="space-y-4">
                 <div className="flex items-center space-x-4" data-testid="contact-email">
                   <Mail className="text-primary text-xl w-6 h-6" />
-                  <span className="text-muted-foreground">adeline@example.com</span>
+                  <span className="text-muted-foreground">sivakulanthaisamy1804@gmail.com</span>
                 </div>
                 <div className="flex items-center space-x-4" data-testid="contact-phone">
                   <Phone className="text-primary text-xl w-6 h-6" />
-                  <span className="text-muted-foreground">+1 (555) 123-4567</span>
+                  <span className="text-muted-foreground">+91 6380603146</span>
                 </div>
                 <div className="flex items-center space-x-4" data-testid="contact-location">
                   <MapPin className="text-primary text-xl w-6 h-6" />
-                  <span className="text-muted-foreground">San Francisco, CA</span>
+                  <span className="text-muted-foreground">Erode, India</span>
                 </div>
               </div>
             </div>
 
             {/* Social Media Links */}
             <div>
-              <h4 className="text-lg font-semibold text-primary mb-4">Follow Me</h4>
+              <h4 className="text-lg font-semibold text-white-800 mb-4">Follow Me</h4>
               <div className="flex space-x-4">
                 <a
-                  href="#"
-                  className="text-muted-foreground hover:text-primary transition-colors text-2xl"
+                  href="https://www.linkedin.com/in/siva-kulanthaisamy-1776352a9/"
+                  className="text-white-600 hover:text-white-600 transition-colors text-2xl"
                   data-testid="social-linkedin"
                 >
                   <i className="fab fa-linkedin"></i>
                 </a>
                 <a
-                  href="#"
-                  className="text-muted-foreground hover:text-primary transition-colors text-2xl"
+                  href="https://github.com/sivasks2004"
+                  className="text-white-600 hover:text-white transition-colors text-2xl"
                   data-testid="social-github"
                 >
                   <i className="fab fa-github"></i>
                 </a>
-                <a
-                  href="#"
-                  className="text-muted-foreground hover:text-primary transition-colors text-2xl"
-                  data-testid="social-twitter"
-                >
-                  <i className="fab fa-twitter"></i>
-                </a>
-                <a
-                  href="#"
-                  className="text-muted-foreground hover:text-primary transition-colors text-2xl"
-                  data-testid="social-dribbble"
-                >
-                  <i className="fab fa-dribbble"></i>
-                </a>
               </div>
             </div>
+
           </div>
 
           {/* Contact Form */}
@@ -161,7 +159,7 @@ export default function ContactSection() {
 
               <div>
                 <Label htmlFor="email" className="block text-sm font-medium text-primary mb-2">
-                  Email
+                  Gmail
                 </Label>
                 <Input
                   type="email"
@@ -188,7 +186,7 @@ export default function ContactSection() {
                   value={formData.message}
                   onChange={handleInputChange}
                   className="form-input w-full px-4 py-3 rounded-lg text-foreground placeholder-muted-foreground resize-none"
-                  placeholder="Tell me about your project..."
+                  placeholder="Your Message"
                   data-testid="textarea-message"
                 />
               </div>
