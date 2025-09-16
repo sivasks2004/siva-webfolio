@@ -38,7 +38,13 @@ export default function ContactSection() {
       [name]: value
     }));
   };
+  const monthlyLimit = 200;
 
+  // Load emails sent from localStorage
+  let emailsSent = Number(localStorage.getItem("emailsSent") || 0);
+
+  // Calculate remaining emails
+  const remainingEmails = monthlyLimit - emailsSent;
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -52,10 +58,12 @@ export default function ContactSection() {
           email: formData.email,
           subject: formData.subject,   // ✅ include subject
           message: formData.message,
+          remainingEmails: remainingEmails,
         },
         "MbKBnLxIU7K6Xy1YX"
       );
-
+      emailsSent += 1;
+      localStorage.setItem("emailsSent", String(emailsSent));
       toast({
         title: "Message sent successfully!",
         description: "Thank you for your message. I'll get back to you soon.",
@@ -119,21 +127,21 @@ export default function ContactSection() {
               <div className="flex space-x-4">
                 <a
                   href="https://www.linkedin.com/in/siva-kulanthaisamy-1776352a9/"
-                  className="text-white-600 hover:text-white-600 transition-colors text-2xl"
+                  className="text-white-600 hover:text-white-600 transition-transform transform hover:scale-110 text-2xl"
                   data-testid="social-linkedin"
                 >
                   <i className="fab fa-linkedin"></i>
                 </a>
                 <a
                   href="https://github.com/sivasks2004"
-                  className="text-white-600 hover:text-white transition-colors text-2xl"
+                  className="text-white-600 hover:text-white transition-transform transform hover:scale-110 text-2xl"
                   data-testid="social-github"
                 >
                   <i className="fab fa-github"></i>
                 </a>
-                  <a
+                <a
                   href="https://leetcode.com/u/w8DvZ5Y8JD/"
-                  className="text-white-600 hover:text-white transition-colors text-2xl"
+                  className="text-white-600 hover:text-white transition-transform transform hover:scale-110 text-2xl"
                   data-testid="social-github"
                 >
                   {/* LeetCode SVG Icon */}
@@ -143,7 +151,7 @@ export default function ContactSection() {
                     fill="currentColor"
                     className="w-6 h-6"
                   >
-                    <path d="M27.61 23.06l-3.73 3.73a8.13 8.13 0 01-11.48 0l-7.19-7.19a8.13 8.13 0 010-11.48l3.73-3.73a1.25 1.25 0 111.77 1.77l-3.73 3.73a5.63 5.63 0 000 7.97l7.19 7.19a5.63 5.63 0 007.97 0l3.73-3.73a1.25 1.25 0 111.77 1.77zm-13.44-2.49a1.25 1.25 0 010-1.77l6.25-6.25a1.25 1.25 0 111.77 1.77l-6.25 6.25a1.25 1.25 0 01-1.77 0z"/>
+                    <path d="M27.61 23.06l-3.73 3.73a8.13 8.13 0 01-11.48 0l-7.19-7.19a8.13 8.13 0 010-11.48l3.73-3.73a1.25 1.25 0 111.77 1.77l-3.73 3.73a5.63 5.63 0 000 7.97l7.19 7.19a5.63 5.63 0 007.97 0l3.73-3.73a1.25 1.25 0 111.77 1.77zm-13.44-2.49a1.25 1.25 0 010-1.77l6.25-6.25a1.25 1.25 0 111.77 1.77l-6.25 6.25a1.25 1.25 0 01-1.77 0z" />
                   </svg>
                 </a>
               </div>
