@@ -1,6 +1,7 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
+import Professional_photo_3 from "attached_assets/Professional_photo_3.jpeg";
 
 export default function HeroSection() {
   const { ref: leftRef, isVisible: leftVisible } = useScrollAnimation({
@@ -77,7 +78,7 @@ export default function HeroSection() {
             className={`slide-in-left ${leftVisible ? "visible" : ""}`}
           >
             <img
-              src="attached_assets/Professional_photo_3.jpeg"
+              src={Professional_photo_3}
               alt="Siva Kulanthaisamy professional Portrait"
               className="rounded-lg shadow-2xl w-full h-auto object-cover"
               data-testid="hero-portrait"
