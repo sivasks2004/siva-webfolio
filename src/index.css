@@ -259,3 +259,21 @@
     transform: translateY(-2px);
   }
 }
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+.animate-blink {
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink 1s infinite;
+}
+/* Hide default cursor everywhere */
+body, a, button, * {
+  cursor: none !important;
+}
+
+/* Allow system cursor inside text inputs */
+input, textarea, [contenteditable="true"] {
+  cursor: none !important;
+}

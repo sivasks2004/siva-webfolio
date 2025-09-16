@@ -12,6 +12,7 @@ import emailjs from "emailjs-com";
 interface FormData {
   name: string;
   email: string;
+  subject: string;   // ✅ Added subject
   message: string;
 }
 
@@ -24,6 +25,7 @@ export default function ContactSection() {
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
+    subject: "",   // ✅ initialize subject
     message: ""
   });
 
@@ -37,39 +39,39 @@ export default function ContactSection() {
     }));
   };
 
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
 
-const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
-  setIsSubmitting(true);
+    try {
+      await emailjs.send(
+        "service_2ufuzm2",
+        "template_zef9108",
+        {
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,   // ✅ include subject
+          message: formData.message,
+        },
+        "MbKBnLxIU7K6Xy1YX"
+      );
 
-  try {
-    await emailjs.send(
-      "service_2ufuzm2",
-      "template_zef9108",
-      {
-        name: formData.name,
-        email: formData.email,
-        message: formData.message,
-      },
-      "MbKBnLxIU7K6Xy1YX"
-    );
+      toast({
+        title: "Message sent successfully!",
+        description: "Thank you for your message. I'll get back to you soon.",
+      });
 
-    toast({
-      title: "Message sent successfully!",
-      description: "Thank you for your message. I'll get back to you soon.",
-    });
-
-    setFormData({ name: "", email: "", message: "" });
-  } catch (error) {
-    toast({
-      title: "Error sending message",
-      description: "Please try again later.",
-      variant: "destructive",
-    });
-  } finally {
-    setIsSubmitting(false);
-  }
-};
+      setFormData({ name: "", email: "", subject: "", message: "" });  // ✅ reset subject too
+    } catch (error) {
+      toast({
+        title: "Error sending message",
+        description: "Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <section id="contact" className="py-20">
@@ -129,6 +131,21 @@ const handleSubmit = async (e: React.FormEvent) => {
                 >
                   <i className="fab fa-github"></i>
                 </a>
+                  <a
+                  href="https://leetcode.com/u/w8DvZ5Y8JD/"
+                  className="text-white-600 hover:text-white transition-colors text-2xl"
+                  data-testid="social-github"
+                >
+                  {/* LeetCode SVG Icon */}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 32 32"
+                    fill="currentColor"
+                    className="w-6 h-6"
+                  >
+                    <path d="M27.61 23.06l-3.73 3.73a8.13 8.13 0 01-11.48 0l-7.19-7.19a8.13 8.13 0 010-11.48l3.73-3.73a1.25 1.25 0 111.77 1.77l-3.73 3.73a5.63 5.63 0 000 7.97l7.19 7.19a5.63 5.63 0 007.97 0l3.73-3.73a1.25 1.25 0 111.77 1.77zm-13.44-2.49a1.25 1.25 0 010-1.77l6.25-6.25a1.25 1.25 0 111.77 1.77l-6.25 6.25a1.25 1.25 0 01-1.77 0z"/>
+                  </svg>
+                </a>
               </div>
             </div>
 
@@ -169,8 +186,26 @@ const handleSubmit = async (e: React.FormEvent) => {
                   value={formData.email}
                   onChange={handleInputChange}
                   className="form-input w-full px-4 py-3 rounded-lg text-foreground placeholder-muted-foreground"
-                  placeholder="your.email@example.com"
+                  placeholder="your Gmail"
                   data-testid="input-email"
+                />
+              </div>
+
+              {/* ✅ Subject Field */}
+              <div>
+                <Label htmlFor="subject" className="block text-sm font-medium text-primary mb-2">
+                  Subject
+                </Label>
+                <Input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  required
+                  value={formData.subject}
+                  onChange={handleInputChange}
+                  className="form-input w-full px-4 py-3 rounded-lg text-foreground placeholder-muted-foreground"
+                  placeholder="Subject"
+                  data-testid="input-subject"
                 />
               </div>
 

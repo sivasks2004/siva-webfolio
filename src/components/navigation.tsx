@@ -17,7 +17,7 @@ export default function Navigation() {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo/Name */}
-          <div className="text-2xl font-bold text-primary">
+            <div className="text-1.5xl font-bold text-primary" style={{ fontFamily: 'Montserrat, sans-serif' }}>
             <span>Siva Kulanthaisamy</span>
           </div>
 
@@ -73,7 +73,7 @@ export default function Navigation() {
 
       {/* Mobile Navigation */}
       <div className={`mobile-menu fixed top-0 right-0 h-full w-64 bg-card border-l border-border md:hidden ${isMobileMenuOpen ? 'open' : ''}`}>
-        <div className="p-6">
+        <div className="p-6 bg-black text-foreground hover:text-primary transition-colors text-lg text-left p-2 rounded">
           <button
             className="text-primary mb-8"
             onClick={() => setIsMobileMenuOpen(false)}
@@ -84,38 +84,38 @@ export default function Navigation() {
           <div className="flex flex-col space-y-6">
             <button
               onClick={() => scrollToSection('home')}
-              className="text-foreground hover:text-primary transition-colors text-lg text-left"
+              className="bg-black text-foreground hover:text-primary transition-colors text-lg text-left p-2 rounded hover:shadow-lg hover:shadow-white/60"
               data-testid="mobile-nav-home"
             >
-              Home
+              Home 合
             </button>
             <button
               onClick={() => scrollToSection('about')}
-              className="text-foreground hover:text-primary transition-colors text-lg text-left"
+              className="bg-black text-foreground hover:text-primary transition-colors text-lg text-left p-2 rounded hover:shadow-lg hover:shadow-white/60"
               data-testid="mobile-nav-about"
             >
-              About
+              About 🛈
             </button>
             <button
               onClick={() => scrollToSection('projects')}
-              className="text-foreground hover:text-primary transition-colors text-lg text-left"
+              className="bg-black text-foreground hover:text-primary transition-colors text-lg text-left p-2 rounded hover:shadow-lg hover:shadow-white/60"
               data-testid="mobile-nav-projects"
             >
-              Projects
+              Projects 🗁
             </button>
             <button
               onClick={() => scrollToSection('skills')}
-              className="text-foreground hover:text-primary transition-colors text-lg text-left"
+              className="bg-black text-foreground hover:text-primary transition-colors text-lg text-left p-2 rounded hover:shadow-lg hover:shadow-white/60"
               data-testid="mobile-nav-skills"
             >
-              Skills
+              Skills ☕︎
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="text-foreground hover:text-primary transition-colors text-lg text-left"
+              className="bg-black text-foreground hover:text-primary transition-colors text-lg text-left p-2 rounded hover:shadow-lg hover:shadow-white/60"
               data-testid="mobile-nav-contact"
             >
-              Contact
+              Contact ✉︎
             </button>
           </div>
         </div>

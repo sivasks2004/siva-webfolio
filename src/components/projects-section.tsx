@@ -46,7 +46,7 @@ The system is modular, responsive, and ensures secure data handling with Firebas
     title: "EcoTrack360 – Real-Time Smart Bin Monitoring System",
     description:
       "EcoTrack360 is an IoT-enabled smart waste management system that improves waste segregation, monitoring, and collection efficiency. It uses smart bins, sensors, AI-powered waste classification, and a mobile application to reduce environmental hazards, operational costs, and inefficiencies in traditional waste management.",
-    image: "attached_assets/Eco_track 360.png",
+    image: "attached_assets/Eco_track 360 BW.png",
     technologies: ["C++", "Arduino UNO", "React Native", "IoT devices"],
     codeUrl: "https://github.com/sivasks2004/EcoTrack_360/blob/main/README.md"
   },
@@ -140,7 +140,7 @@ function ProjectCard({
           {project.title}
         </h3>
         <p
-          className="text-muted-foreground mb-4"
+          className="text-sm text-muted-foreground mb-4 leading-relaxed"
           data-testid={`project-description-${project.id}`}
         >
           {project.description}
