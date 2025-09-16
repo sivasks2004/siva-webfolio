@@ -78,7 +78,7 @@ export default function HeroSection() {
             className={`slide-in-left ${leftVisible ? "visible" : ""}`}
           >
             <img
-              src="src\Professional_photo_3.jpeg"
+              src="attached_assets\Professional_photo_3.jpeg"
               alt="Siva Kulanthaisamy professional Portrait"
               className="rounded-lg shadow-2xl w-full h-auto object-cover"
               data-testid="hero-portrait"
