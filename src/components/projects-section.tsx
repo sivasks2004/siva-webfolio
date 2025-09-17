@@ -19,7 +19,7 @@ const projects: Project[] = [
     description: `Festive Crackers Booking (FBS) is a full-stack e-commerce web application built using React JS and Firebase.
 It provides a smooth and user-friendly platform for customers to browse, select, and purchase festive crackers online.
 The system is modular, responsive, and ensures secure data handling with Firebase Authentication and Firestore Database.`,
-    image: "public/FCB_Logo.jpg",
+    image: "/FCB_Logo.jpg",
     technologies: ["React", "Node.js", "Firebase"],
     codeUrl: "https://github.com/sivasks2004/Festive_Crackers_Booking"
   },
@@ -28,7 +28,7 @@ The system is modular, responsive, and ensures secure data handling with Firebas
     title: "E-Commerce Sales Dashboard",
     description:
       "An interactive and visually rich dashboard designed in Power BI to analyze sales performance, profit trends, and customer behavior in the e-commerce domain.",
-    image: "public/BI_image.jpg",
+    image: "/BI_image.jpg",
     technologies: ["Power BI"],
     codeUrl: "https://github.com/sivasks2004/E-Commerce-Sales-Dashboard/blob/main/README.md"
   },
@@ -37,7 +37,7 @@ The system is modular, responsive, and ensures secure data handling with Firebas
     title: "Student Event Management System",
     description:
       "The Student Event Management System is designed to streamline event management within an educational institution. This platform is used by both students and teachers, ensuring an efficient and engaging event experience.",
-    image: "public/KEC.jpg",
+    image: "/KEC.jpg",
     technologies: ["Flutter", "NodeJS", "MongoDB"],
     codeUrl: "https://github.com/sivasks2004/Student_Event_Management_System_SEMS/blob/main/README.md"
   },
@@ -46,7 +46,7 @@ The system is modular, responsive, and ensures secure data handling with Firebas
     title: "EcoTrack360 – Real-Time Smart Bin Monitoring System",
     description:
       "EcoTrack360 is an IoT-enabled smart waste management system that improves waste segregation, monitoring, and collection efficiency. It uses smart bins, sensors, AI-powered waste classification, and a mobile application to reduce environmental hazards, operational costs, and inefficiencies in traditional waste management.",
-    image: "public/Eco_track_360.jpg",
+    image: "/Eco_track_360.jpg",
     technologies: ["C++", "Arduino UNO", "React Native", "IoT devices"],
     codeUrl: "https://github.com/sivasks2004/EcoTrack_360/blob/main/README.md"
   },
@@ -55,7 +55,7 @@ The system is modular, responsive, and ensures secure data handling with Firebas
     title: "Automatic Water Sprinkling Machine using Smart Irrigation System",
     description:
       "Maintaining a healthy garden, backyard, or agricultural field requires consistent and efficient watering. Traditional manual watering can be time-consuming, labour-intensive, and inefficient. This project introduces a Smart Irrigation System that automates watering using real-time soil conditions, ensuring optimal water usage and enhanced plant health.",
-    image: "public/Farmer.jpg",
+    image: "/Farmer.jpg",
     technologies: ["Arduino UNO", "C++", "IoT devices"],
     codeUrl: "https://github.com/sivasks2004/Automatic_Water_Sprinkler_Machine_Using_Smart_Irrigation_System/blob/main/README.md"
   }

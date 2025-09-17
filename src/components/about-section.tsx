@@ -103,7 +103,7 @@ export default function AboutSection() {
             <Tilt glareEnable={true} glareMaxOpacity={0.2} scale={1.05}>
               <div className="flex justify-center">
                 <img
-                  src="public/Data_Analyst_GIF.gif"
+                  src="/Data_Analyst_GIF.gif"
                   alt="Coding animation"
                   className="rounded-xl shadow-lg w-full max-w-[220px] md:max-w-[280px] h-auto object-cover"
                   data-testid="about-image-gif"
