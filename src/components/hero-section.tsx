@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 
 
+
 export default function HeroSection() {
   const { ref: leftRef, isVisible: leftVisible } = useScrollAnimation({
     triggerOnMount: true,
@@ -78,7 +79,7 @@ export default function HeroSection() {
             className={`slide-in-left ${leftVisible ? "visible" : ""}`}
           >
             <img
-              src="attached_assets\Professional_photo_3.jpeg"
+              src="public\Professional_photo_3.jpg"
               alt="Siva Kulanthaisamy professional Portrait"
               className="rounded-lg shadow-2xl w-full h-auto object-cover"
               data-testid="hero-portrait"
