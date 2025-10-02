@@ -38,6 +38,13 @@ const certifications: Certification[] = [
     image: "/Inlighnx.png",
     skills: ["InLighnX Global Pvt. Ltd.","Intern", "Data Analytics"],
     certUrl: "https://drive.google.com/file/d/1ng3BA4U-xirn9luG9_GC2fPwnGnhUscP/view?usp=sharing"
+  },
+   {
+    id: 5,
+    title: "Internship Completion Certificate",
+    image: "/Inlighnx.png",
+    skills: ["InLighnX Global Pvt. Ltd.","Intern", "Data Analytics"],
+    certUrl: "https://drive.google.com/file/d/1IquDK0NQnEhd64YcDPTEDWvRrtcvKKNa/view?usp=sharing"
   }
 ];
 
