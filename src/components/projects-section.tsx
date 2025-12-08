@@ -58,6 +58,14 @@ The system is modular, responsive, and ensures secure data handling with Firebas
     image: "/Farmer.jpg",
     technologies: ["Arduino UNO", "C++", "IoT devices"],
     codeUrl: "https://github.com/sivasks2004/Automatic_Water_Sprinkler_Machine_Using_Smart_Irrigation_System/blob/main/README.md"
+  },
+   {
+    id: 6,
+    title: "Neural Network Workspace",
+    description:"An interactive web application for visualizing and training neural networks. Built with React, this playground allows you to experiment with different network configurations, activation functions, and training parameters in real-time",
+    image: "/NN_Image.jpg",
+    technologies: ["React Js", "CSS", "JavaScript"],
+    codeUrl: "https://github.com/sivasks2004/NeuralNetworkPlayground-DL/blob/main/README.md"
   }
 ];
 
