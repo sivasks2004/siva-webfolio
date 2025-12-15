@@ -32,24 +32,24 @@ interface Skill {
 
 const skills: Skill[] = [
   // Frontend
-  { name: "React", icon: <SiReact />, category: "Frontend" },
-  { name: "HTML", icon: <SiHtml5 />, category: "Frontend" },
-  { name: "CSS", icon: <SiCss3/>, category: "Frontend" },
+
+  //{ name: "HTML", icon: <SiHtml5 />, category: "Frontend" },
+  //{ name: "CSS", icon: <SiCss3/>, category: "Frontend" },
   // Backend
+  { name: "SQL", icon: <SiSqlite />, category: "languages" },
+  { name: "PowerBI", icon: <SiPowers />, category: "Tools" },
+  {name: "Python", icon: <SiPython />, category: "languages" },
+  {name: "java", icon: <SiAjv />, category: "languages" },
+  { name: "MySQL", icon: <SiMysql />, category: "Database" },
+  { name: "PostgreSQL", icon: <SiPostgresql />, category: "Backend" },
   { name: "Node.js", icon: <SiNodedotjs />, category: "Backend" },
   { name: "MongoDB", icon: <SiMongodb />, category: "Database" },
   { name: "Firebase", icon: <SiFirebase />, category: "Database" },
-  { name: "MySQL", icon: <SiMysql />, category: "Database" },
-  { name: "PostgreSQL", icon: <SiPostgresql />, category: "Backend" },
   // Tools
   { name: "Git", icon: <SiGit />, category: "Tools" },
   { name: "Arduino UNO", icon: <SiArduino />, category: "Tools" },
   
   
-{ name: "PowerBI", icon: <SiPowers />, category: "Tools" },
-{ name: "SQL", icon: <SiSqlite />, category: "languages" },
-{name: "Python", icon: <SiPython />, category: "languages" },
-{name: "java", icon: <SiAjv />, category: "languages" },
 ];
  
 export default function SkillsSection() {

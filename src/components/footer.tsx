@@ -1,5 +1,5 @@
 "use client";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaCode, FaHackerrank } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 export default function Footer() {
@@ -63,6 +63,23 @@ export default function Footer() {
             className="hover:text-primary transition-colors"
           >
             <FaGithub />
+          </motion.a>
+          <motion.a
+            href="https://leetcode.com/u/w8DvZ5Y8JD/"
+            whileHover={{ scale: 1.2, rotate: -5 }}
+            whileTap={{ scale: 0.9 }}
+            className="hover:text-primary transition-colors"
+          >
+            <FaCode />
+          </motion.a>
+          <motion.a
+            href="https://www.hackerrank.com/profile/sivakulanthaisa1"
+            whileHover={{ scale: 1.2, rotate: -5 }}
+            whileTap={{ scale: 0.9 }}
+            className="hover:text-primary transition-colors"
+          >
+            <FaHackerrank />
+            
           </motion.a>
         </motion.div>
 

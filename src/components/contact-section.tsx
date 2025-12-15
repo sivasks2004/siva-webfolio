@@ -142,7 +142,7 @@ export default function ContactSection() {
                 <a
                   href="https://leetcode.com/u/w8DvZ5Y8JD/"
                   className="text-white-600 hover:text-white transition-transform transform hover:scale-110 text-2xl"
-                  data-testid="social-github"
+                  data-testid="social-Leetcode"
                 >
                   {/* LeetCode SVG Icon */}
                   <svg

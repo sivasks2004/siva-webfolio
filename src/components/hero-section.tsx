@@ -30,7 +30,7 @@ export default function HeroSection() {
   }, []);
 
   // Words for typing effect
-  const words = ["Data Analyst", "Business Analyst", "BI Developer", "Tech Enthusiast"];
+  const words = ["Data Analyst", "BI Developer", "Tech Enthusiast"];
   const [index, setIndex] = useState(0);
   const [subIndex, setSubIndex] = useState(0);
   const [forward, setForward] = useState(true);
