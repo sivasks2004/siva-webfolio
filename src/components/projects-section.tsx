@@ -16,7 +16,7 @@ const projects: Project[] = [
   {
     id: 1,
     title: "KEC MCA Alumni Management System",
-    description: `Modern alumni platform for students and alumni of KEC MCA to connect, share information, and showcase social impact.`,
+    description: `The KEC MCA Alumni Management System is a full-stack web platform developed to digitally unite the MCA alumni community of Kongu Engineering College (KEC) with current students and faculty members. The system serves as a centralized digital ecosystem that strengthens long-term alumni relationships while professional collaboration, mentorship and socially responsible initiatives. `,
     image: "/KEC.jpg",
     technologies: ["React", "Node.js", "Firebase", "Cloudinary"],
     codeUrl: "https://alumini2k26.vercel.app/"
