@@ -71,7 +71,7 @@ export default function AboutSection() {
             <div className="flex justify-end mt-6">
               <div className="relative group">
                 <a
-                  href="https://drive.google.com/file/d/1qviWJegSrbyIYgIzN4hqTaWY43vwWDEZ/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1ax7QNaxuiwfEJB4tpttd6n4Ca7nC6xS3/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary bg-primary text-primary-foreground px-4 py-2 rounded-md font-semibold transition-all text-sm shadow-lg z-10 relative overflow-hidden group-hover:scale-105 group-active:scale-95 duration-300"

@@ -15,14 +15,22 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "E-Gadget Store",
-    description: `E-Gadgets Store (EGS) is a full-stack e-commerce web application developed using React JS and Firebase. It offers a seamless and intuitive platform for users to explore, choose, and purchase electrical gadgets online. The application is modular, fully responsive, and ensures secure data management through Firebase Authentication and Firestore Database.`,
-    image: "/EGS_Logo-.png",
-    technologies: ["React", "Node.js", "Firebase","Cloudinary"],
-    codeUrl: "https://e-gadget-store.vercel.app/"
+    title: "KEC MCA Alumni Management System",
+    description: `Modern alumni platform for students and alumni of KEC MCA to connect, share information, and showcase social impact.`,
+    image: "/KEC.jpg",
+    technologies: ["React", "Node.js", "Firebase", "Cloudinary"],
+    codeUrl: "https://alumini2k26.vercel.app/"
   },
   {
     id: 2,
+    title: "E-Gadget Store",
+    description: `E-Gadgets Store (EGS) is a full-stack e-commerce web application developed using React JS and Firebase. It offers a seamless and intuitive platform for users to explore, choose, and purchase electrical gadgets online. The application is modular, fully responsive, and ensures secure data management through Firebase Authentication and Firestore Database.`,
+    image: "/EGS_Logo-.png",
+    technologies: ["React", "Node.js", "Firebase", "Cloudinary"],
+    codeUrl: "https://e-gadget-store.vercel.app/"
+  },
+  {
+    id: 3,
     title: "NeuroLab",
     description: "NeuroLab is a cloud-hosted, SaaS-style web application built to deliver a modern, responsive, and user-friendly digital experience. The platform focuses on intuitive navigation, clean interface design, and performance optimization. Developed using modern web technologies, NeuroLab demonstrates scalable architecture and user-centric development practices. It is designed to be easily accessible through a web browser without the need for installation.",
     image: "/NeuroLab.png",
@@ -30,7 +38,7 @@ const projects: Project[] = [
     codeUrl: "https://neuro-lab-client.vercel.app/"
   },
   {
-    id: 3,
+    id: 4,
     title: "Neural Network Workspace",
     description: "An interactive web application for visualizing and training neural networks. Built with React, this playground allows you to experiment with different network configurations, activation functions, and training parameters in real-time",
     image: "/NN_Image.jpg",
@@ -38,7 +46,7 @@ const projects: Project[] = [
     codeUrl: "https://github.com/sivasks2004/NeuralNetworkPlayground-DL/blob/main/README.md"
   },
   {
-    id: 4,
+    id: 5,
     title: "E-Commerce Sales Dashboard",
     description:
       "An interactive and visually rich dashboard designed in Power BI to analyze sales performance, profit trends, and customer behavior in the e-commerce domain.",
@@ -47,7 +55,7 @@ const projects: Project[] = [
     codeUrl: "https://github.com/sivasks2004/E-Commerce-Sales-Dashboard/blob/main/README.md"
   },
   {
-    id: 5,
+    id: 6,
     title: "Festive Crackers Booking",
     description: `Festive Crackers Booking (FBS) is a full-stack e-commerce web application built using React JS and Firebase.
 It provides a smooth and user-friendly platform for customers to browse, select, and purchase festive crackers online.
@@ -57,7 +65,7 @@ The system is modular, responsive, and ensures secure data handling with Firebas
     codeUrl: "https://github.com/sivasks2004/Festive_Crackers_Booking"
   },
   {
-    id: 6,
+    id: 7,
     title: "EcoTrack360 – Real-Time Smart Bin Monitoring System",
     description:
       "EcoTrack360 is an IoT-enabled smart waste management system that improves waste segregation, monitoring, and collection efficiency. It uses smart bins, sensors, AI-powered waste classification, and a mobile application to reduce environmental hazards, operational costs, and inefficiencies in traditional waste management.",
@@ -66,16 +74,16 @@ The system is modular, responsive, and ensures secure data handling with Firebas
     codeUrl: "https://github.com/sivasks2004/EcoTrack_360/blob/main/README.md"
   },
   {
-    id: 7,
+    id: 8,
     title: "Student Event Management System",
     description:
       "The Student Event Management System is designed to streamline event management within an educational institution. This platform is used by both students and teachers, ensuring an efficient and engaging event experience.",
     image: "/KEC.jpg",
-    technologies: ["Flutter", "NodeJS", "MongoDB"],
-    codeUrl: "https://github.com/sivasks2004/Student_Event_Management_System_SEMS/blob/main/README.md"
+    technologies: ["Flutter", "NodeJS", "NeonDB", "PostgreSQL"],
+    codeUrl: "https://student-event-management-system-ten.vercel.app/"
   },
   {
-    id: 8,
+    id: 9,
     title: "Automatic Water Sprinkling Machine using Smart Irrigation System",
     description:
       "Maintaining a healthy garden, backyard, or agricultural field requires consistent and efficient watering. Traditional manual watering can be time-consuming, labour-intensive, and inefficient. This project introduces a Smart Irrigation System that automates watering using real-time soil conditions, ensuring optimal water usage and enhanced plant health.",
