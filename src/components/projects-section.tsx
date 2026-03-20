@@ -80,7 +80,7 @@ The system is modular, responsive, and ensures secure data handling with Firebas
       "The Student Event Management System is designed to streamline event management within an educational institution. This platform is used by both students and teachers, ensuring an efficient and engaging event experience.",
     image: "/KEC.jpg",
     technologies: ["Flutter", "NodeJS", "NeonDB", "PostgreSQL"],
-    codeUrl: "https://student-event-management-system-ten.vercel.app/"
+    codeUrl: "https://student-event-management-system-one.vercel.app/"
   },
   {
     id: 9,
